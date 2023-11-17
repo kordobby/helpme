@@ -16,10 +16,11 @@ const initialData: UserEntity = {
 };
 export function Header() {
   /* 임시 자동 로그인 로직
+   */
+
   useEffect(() => {
     sessionStorage.setItem("userInfo", JSON.stringify(initialData));
   }, []);
- */
   return (
     <StHeader>
       <StSlot />
@@ -91,9 +92,11 @@ const StSlot = styled.div`
 const StProfile = styled.div`
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   .profile_image {
-    width: 15px;
-    height: 15px;
+    width: 30px;
+    height: 30px;
     background-color: blue;
     border-radius: 15px;
+    margin-right: 5px;
 `;
